@@ -1,11 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.34301.259
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TQueue", "TQueue\TQueue.vcxproj", "{B97823DF-C113-4856-9645-6B5C494251C3}"
-EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CppWinForm1", "Буфер\CppWinForm1.vcxproj", "{9696B190-8A31-45BA-A43E-0287102EF438}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CppWinForm1", "CppWinForm1.vcxproj", "{9696B190-8A31-45BA-A43E-0287102EF438}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,14 +13,6 @@ Global
 		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{B97823DF-C113-4856-9645-6B5C494251C3}.Debug|x64.ActiveCfg = Debug|x64
-		{B97823DF-C113-4856-9645-6B5C494251C3}.Debug|x64.Build.0 = Debug|x64
-		{B97823DF-C113-4856-9645-6B5C494251C3}.Debug|x86.ActiveCfg = Debug|Win32
-		{B97823DF-C113-4856-9645-6B5C494251C3}.Debug|x86.Build.0 = Debug|Win32
-		{B97823DF-C113-4856-9645-6B5C494251C3}.Release|x64.ActiveCfg = Release|x64
-		{B97823DF-C113-4856-9645-6B5C494251C3}.Release|x64.Build.0 = Release|x64
-		{B97823DF-C113-4856-9645-6B5C494251C3}.Release|x86.ActiveCfg = Release|Win32
-		{B97823DF-C113-4856-9645-6B5C494251C3}.Release|x86.Build.0 = Release|Win32
 		{9696B190-8A31-45BA-A43E-0287102EF438}.Debug|x64.ActiveCfg = Debug|x64
 		{9696B190-8A31-45BA-A43E-0287102EF438}.Debug|x64.Build.0 = Debug|x64
 		{9696B190-8A31-45BA-A43E-0287102EF438}.Debug|x86.ActiveCfg = Debug|Win32
@@ -34,8 +24,5 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {475A623E-E785-4E9A-865A-495C36B4FF2A}
 	EndGlobalSection
 EndGlobal

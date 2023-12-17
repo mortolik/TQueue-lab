@@ -13,6 +13,9 @@ class TQueue
 	int size, start, finish, count;
 
 public:
+	int GetStart() { return start; }
+	int GetFinish() { return finish; }
+	int GetCount() { return count; }
 	TQueue(int _size) {
 		pMem = new T[_size];
 		size = _size;
@@ -95,6 +98,9 @@ public:
 		return el;
 	}
 
-	T Front() { return pMem[start]; }			
-	T Back() { return pMem[finish]; }			
+	T Front() { return pMem[start]; }			// front returns 1st element in the queue
+	T Back() { return pMem[finish]; }			// returns last element in the queue
+
+	// Also add tests.
+	//next: list.
 };
