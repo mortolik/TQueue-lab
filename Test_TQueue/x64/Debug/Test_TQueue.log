@@ -1,0 +1,5 @@
+﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(517,5): warning MSB8028: промежуточный каталог (x64\Debug\) содержит файлы, которые используются совместно с другим проектом (TestStack.vcxproj).  Это может привести к ошибкам очистки и перестроения.
+  test_tqueue.cpp
+C:\Git\mp2-lab4-queue\TQueue\Test_TQueue\gtest.h(55,1): warning C4005: _SILENCE_TR1_NAMESPACE_DEPRECATION_WARNING: изменение макроопределения
+C:\Git\mp2-lab4-queue\TQueue\Test_TQueue\gtest.h(55,1): message : "_SILENCE_TR1_NAMESPACE_DEPRECATION_WARNING" ранее объявлен в командной строке
+  Test_TQueue.vcxproj -> C:\Git\mp2-lab4-queue\TQueue\x64\Debug\Test_TQueue.exe

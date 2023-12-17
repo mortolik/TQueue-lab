@@ -225,24 +225,27 @@ namespace CppWinForm1 {
 			// 
 			// button1
 			// 
+			this->button1->BackColor = System::Drawing::Color::Lime;
+			this->button1->ForeColor = System::Drawing::SystemColors::Desktop;
 			this->button1->Location = System::Drawing::Point(47, 302);
 			this->button1->Margin = System::Windows::Forms::Padding(4);
 			this->button1->Name = L"button1";
 			this->button1->Size = System::Drawing::Size(72, 39);
 			this->button1->TabIndex = 10;
 			this->button1->Text = L"Пуск";
-			this->button1->UseVisualStyleBackColor = true;
+			this->button1->UseVisualStyleBackColor = false;
 			this->button1->Click += gcnew System::EventHandler(this, &MyForm::Button1_Click);
 			// 
 			// button2
 			// 
+			this->button2->BackColor = System::Drawing::Color::Crimson;
 			this->button2->Location = System::Drawing::Point(47, 349);
 			this->button2->Margin = System::Windows::Forms::Padding(4);
 			this->button2->Name = L"button2";
 			this->button2->Size = System::Drawing::Size(72, 36);
 			this->button2->TabIndex = 11;
 			this->button2->Text = L"Стоп";
-			this->button2->UseVisualStyleBackColor = true;
+			this->button2->UseVisualStyleBackColor = false;
 			this->button2->Click += gcnew System::EventHandler(this, &MyForm::Button2_Click);
 			// 
 			// timer1
@@ -313,6 +316,7 @@ namespace CppWinForm1 {
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
+			this->BackColor = System::Drawing::SystemColors::Control;
 			this->ClientSize = System::Drawing::Size(1495, 773);
 			this->Controls->Add(this->textBox5);
 			this->Controls->Add(this->label11);

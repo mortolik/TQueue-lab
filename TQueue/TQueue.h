@@ -47,7 +47,7 @@ public:
 	bool operator == (const TQueue& s) {			//operator ==
 		if (size != s.size) return false;
 		else {
-			if (start != s.srart) return false;
+			if (start != s.start) return false;
 			else {
 				if (finish != s.finish) return false;
 				else {
@@ -74,23 +74,30 @@ public:
 		if (count == size) return true;
 		else return false;
 	}
-
-	//push & pop
+	TQueue& operator = (const TQueue& q)
+	{
+		if (*this == q)
+		{
+			return *this;
+		}
+		delete[] pMem;
+		size = q.size;
+		count = q.count;
+		start = q.start;
+		pMem = new T[size];
+		std::copy(q.pMem, q.pMem + size, pMem);
+		return *this;
+	}
 	void Push(const T& el) {
-		//	finish = finish % size; than u can delete next 2 strings
-
+		if (count == size) throw("Full.");
 		finish++;
-		if (finish == size) finish = 0;			//or finish -= size, but i don t sure that it`ll work
-
-
-		//	if (*this.full() == true) throw ("Can`t Push!!")
-
-
-		pMem[finish] = el;				//in pMem[finish] can be element. Need to add check of execution "can we push here?"
+		if (finish == size) finish = 0;
+				pMem[finish] = el;				
 		count++;
 	}
 
 	T Pop() {
+		if (count == 0) throw ("Empty.");
 		T el = pMem[start];
 		start++;
 		if (start == size) start = 0;
@@ -98,9 +105,7 @@ public:
 		return el;
 	}
 
-	T Front() { return pMem[start]; }			// front returns 1st element in the queue
-	T Back() { return pMem[finish]; }			// returns last element in the queue
+	T Front() { return pMem[start]; }			
+	T Back() { return pMem[finish]; }			
 
-	// Also add tests.
-	//next: list.
 };
