@@ -9,108 +9,165 @@ struct TNode
 {
 	T val;
 	TNode <T>* pNext;
+	TNode() { pNext = nullptr; }
 };
 template <class T>
 class TQueue
 {
 	TNode<T>* pFirst, * pLast;
-	T* pMem;
-	int size, start, finish, count;
 
 public:
-	int GetStart() { return start; }
-	int GetFinish() { return finish; }
-	int GetCount() { return count; }
-	TQueue(int _size) {
-		pMem = new T[_size];
-		size = _size;
-		count = 0;
-		start = 0;
-		finish = -1;
-	}
-
-	TQueue(const TQueue& s) {
-		size = s.size;
-		pMem = new T[size];
-		for (int i = 0; i < size; i++)
-			pMem[i] = s.pMem[i];
-		count = s.count;
-		start = s.start;
-		finish = s.finish;
-	}
-	~TQueue() { delete[] pMem; }
-
-	int Size() { return size; }
-
-	void Clear() {
-		delete[] pMem;
-		count = 0;
-		start = 0;
-		finish = -1;
-	}
-
-	bool operator == (const TQueue& s) {			//operator ==
-		if (size != s.size) return false;
-		else {
-			if (start != s.start) return false;
-			else {
-				if (finish != s.finish) return false;
-				else {
-					for (int i = 0; i < size; i++) {
-						if (pMem[i] != s.pMem[i]) return false;
-					}
-				}
-			}
-		}
-		return true;
-	}
-
-	bool operator != (const TQueue& s) {			//operator != 
-		if (*this == s) return false;
-		else return true;
-	}
-
-	bool IsEmpty() {									//check of empty queue: if count = 0 -> queue is empty
-		if (count == 0) return true;
-		else return false;
-	}
-
-	bool IsFull() {									//check of full queue: if count = size -> queue is full
-		if (count == size) return true;
-		else return false;
-	}
-	TQueue& operator = (const TQueue& q)
+	TQueue() { pFirst = nullptr; pLast = nullptr; };
+	TQueue(const TQueue& q);
+	bool IsEmpty() { return pFirst == nullptr; };
+	bool Full()
 	{
-		if (*this == q)
-		{
-			return *this;
-		}
-		delete[] pMem;
-		size = q.size;
-		count = q.count;
-		start = q.start;
-		pMem = new T[size];
-		std::copy(q.pMem, q.pMem + size, pMem);
-		return *this;
-	}
-	void Push(const T& el) {
-		if (count == size) throw("Full.");
-		finish++;
-		if (finish == size) finish = 0;
-				pMem[finish] = el;				
-		count++;
-	}
+		TNode<T>* p = new TNode<T>;
+		bool res = p == nullptr;
+		delete p;
+		return res;
 
-	T Pop() {
-		if (count == 0) throw ("Empty.");
-		T el = pMem[start];
-		start++;
-		if (start == size) start = 0;
-		count--;
-		return el;
 	}
-
-	T Front() { return pMem[start]; }			
-	T Back() { return pMem[finish]; }			
+	void Clear();
+	void Push(const T& element);
+	T Pop();
+	T Back();
+	T Front();
+	~TQueue() { Clear(); }
+	TQueue<T>& operator=(const TQueue<T>& q);
+	bool operator==(const TQueue<T>& q);
 
 };
+
+template <class T>
+ TQueue<T>::TQueue(const TQueue<T> & q)
+{
+	TNode<T>* tmp = q.pFirst, * curr;
+	pFirst = pLast = nullptr;
+	while (tmp != nullptr)
+	{
+		curr = new TNode<T>;
+		curr->val = tmp->val;
+		if (pFirst == nullptr)
+		{
+			pFirst = curr;
+			pLast = curr;
+		}
+		else
+		{
+			pLast->pNext = curr;
+			pLast = curr;
+		}
+		tmp = tmp->pNext;
+	}
+}
+ template<class T>
+ void TQueue<T>::Clear()
+ {
+	 while (!IsEmpty())
+	 {
+		 Pop();
+	 }
+	 pFirst = nullptr;
+	 pLast = nullptr;
+ }
+ template<class T>
+  T TQueue<T>::Pop()
+ {
+	 if (IsEmpty())
+	 {
+		 throw "Queue is IsEmpty, you can't pop";
+	 }
+
+	 TNode<T>* tmp = pFirst;
+	 T result = pFirst->val;
+	 pFirst = pFirst->pNext;
+	 delete tmp;
+	 return result;
+ }
+
+ template<class T>
+ void TQueue<T>::Push(const T& element)
+ {
+	 TNode<T>* tmp = new TNode<T>;
+	 tmp->val = element;
+	 tmp->pNext = nullptr;
+	 if (IsEmpty())
+	 {
+		 pFirst = tmp;
+		 pLast = tmp;
+	 }
+	 else
+	 {
+		 pLast->pNext = tmp;
+		 pLast = tmp;
+	 }
+ }
+ template<class T>
+ inline T TQueue<T>::Front()
+ {
+	 if (IsEmpty())
+	 {
+		 throw "IsEmpty.";
+	 }
+	 return pFirst->val;
+ }
+
+ template<class T>
+  T TQueue<T>::Back()
+ {
+	 if (IsEmpty())
+	 {
+		 throw "IsEmpty.";
+	 }
+	 return pLast->val;
+ }
+  template<class T>
+ TQueue<T>& TQueue<T>::operator=(const TQueue<T>& q)
+  {
+	  if (q.pFirst == nullptr)
+	  {
+		  Clear();
+	  }
+	  else
+	  {
+		  Clear();
+		  TNode<T>* tmp = q.pFirst, * current;
+		  while (tmp != nullptr)
+		  {
+			  current = new TNode<T>;
+			  current->val = tmp->val;
+			  if (pFirst == nullptr)
+			  {
+				  pFirst = current;
+				  pLast = current;
+			  }
+			  else
+			  {
+				  pLast->pNext = current;
+				  pLast = current;
+			  }
+			  tmp = tmp->pNext;
+		  }
+	  }
+	  return *this;
+  }
+
+  template<class T>
+  inline bool TQueue<T>::operator==(const TQueue<T>& q)
+  {
+	  TNode<T>* pRight = q.pFirst, * pLeft = pFirst;
+	  while (pRight != nullptr || pLeft != nullptr) {
+		  if (pRight->val != pLeft->val) {
+			  return false;
+		  }
+		  pRight = pRight->pNext;
+		  pLeft = pLeft->pNext;
+	  }
+	  if ((pRight == nullptr && pLeft != nullptr)
+		  || (pLeft == nullptr && pRight != nullptr)) {
+		  return false;
+	  }
+	  return true;
+
+  }
