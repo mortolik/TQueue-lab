@@ -4,11 +4,16 @@
 #include <locale.h>
 
 using namespace std;
-
+template <class T>
+struct TNode
+{
+	T val;
+	TNode <T>* pNext;
+};
 template <class T>
 class TQueue
 {
-
+	TNode<T>* pFirst, * pLast;
 	T* pMem;
 	int size, start, finish, count;
 
