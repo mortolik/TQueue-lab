@@ -35,7 +35,7 @@ namespace CppWinForm1 {
 	private: System::Windows::Forms::Label^ label8;
 	private: System::Windows::Forms::Label^ label9;
 	private: System::Windows::Forms::Label^ label10;
-	private: System::Windows::Forms::Label^ label11;
+	//private: System::Windows::Forms::Label^ label11;
 			 Pen^ ALLCLPen;
 	public:
 		MyForm(void)
@@ -81,7 +81,7 @@ namespace CppWinForm1 {
 	private: System::Windows::Forms::Label^ label4;
 	private: System::Windows::Forms::TextBox^ textBox4;
 
-	private: System::Windows::Forms::TextBox^ textBox5;
+	//private: System::Windows::Forms::TextBox^ textBox5;
 	private: System::Windows::Forms::Label^ label5;
 
 
@@ -112,7 +112,6 @@ namespace CppWinForm1 {
 			this->textBox3 = (gcnew System::Windows::Forms::TextBox());
 			this->label4 = (gcnew System::Windows::Forms::Label());
 			this->textBox4 = (gcnew System::Windows::Forms::TextBox());
-			this->textBox5 = (gcnew System::Windows::Forms::TextBox());
 			this->label5 = (gcnew System::Windows::Forms::Label());
 			this->button1 = (gcnew System::Windows::Forms::Button());
 			this->button2 = (gcnew System::Windows::Forms::Button());
@@ -122,7 +121,6 @@ namespace CppWinForm1 {
 			this->label8 = (gcnew System::Windows::Forms::Label());
 			this->label9 = (gcnew System::Windows::Forms::Label());
 			this->label10 = (gcnew System::Windows::Forms::Label());
-			this->label11 = (gcnew System::Windows::Forms::Label());
 			this->SuspendLayout();
 			// 
 			// label1
@@ -203,19 +201,10 @@ namespace CppWinForm1 {
 			this->textBox4->TabIndex = 7;
 			this->textBox4->TextChanged += gcnew System::EventHandler(this, &MyForm::TextBox4_TextChanged);
 			// 
-			// textBox5
-			// 
-			this->textBox5->Location = System::Drawing::Point(44, 272);
-			this->textBox5->Margin = System::Windows::Forms::Padding(4);
-			this->textBox5->Name = L"textBox5";
-			this->textBox5->Size = System::Drawing::Size(132, 22);
-			this->textBox5->TabIndex = 8;
-			this->textBox5->TextChanged += gcnew System::EventHandler(this, &MyForm::TextBox5_TextChanged);
-			// 
 			// label5
 			// 
 			this->label5->AutoSize = true;
-			this->label5->Location = System::Drawing::Point(47, 393);
+			this->label5->Location = System::Drawing::Point(44, 346);
 			this->label5->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label5->Name = L"label5";
 			this->label5->Size = System::Drawing::Size(177, 17);
@@ -227,7 +216,7 @@ namespace CppWinForm1 {
 			// 
 			this->button1->BackColor = System::Drawing::Color::Lime;
 			this->button1->ForeColor = System::Drawing::SystemColors::Desktop;
-			this->button1->Location = System::Drawing::Point(47, 302);
+			this->button1->Location = System::Drawing::Point(44, 255);
 			this->button1->Margin = System::Windows::Forms::Padding(4);
 			this->button1->Name = L"button1";
 			this->button1->Size = System::Drawing::Size(72, 39);
@@ -239,7 +228,7 @@ namespace CppWinForm1 {
 			// button2
 			// 
 			this->button2->BackColor = System::Drawing::Color::Crimson;
-			this->button2->Location = System::Drawing::Point(47, 349);
+			this->button2->Location = System::Drawing::Point(44, 302);
 			this->button2->Margin = System::Windows::Forms::Padding(4);
 			this->button2->Name = L"button2";
 			this->button2->Size = System::Drawing::Size(72, 36);
@@ -255,7 +244,7 @@ namespace CppWinForm1 {
 			// label6
 			// 
 			this->label6->AutoSize = true;
-			this->label6->Location = System::Drawing::Point(48, 448);
+			this->label6->Location = System::Drawing::Point(45, 401);
 			this->label6->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label6->Name = L"label6";
 			this->label6->Size = System::Drawing::Size(0, 17);
@@ -264,7 +253,7 @@ namespace CppWinForm1 {
 			// label7
 			// 
 			this->label7->AutoSize = true;
-			this->label7->Location = System::Drawing::Point(47, 431);
+			this->label7->Location = System::Drawing::Point(44, 384);
 			this->label7->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label7->Name = L"label7";
 			this->label7->Size = System::Drawing::Size(161, 17);
@@ -275,7 +264,7 @@ namespace CppWinForm1 {
 			// label8
 			// 
 			this->label8->AutoSize = true;
-			this->label8->Location = System::Drawing::Point(60, 448);
+			this->label8->Location = System::Drawing::Point(57, 401);
 			this->label8->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label8->Name = L"label8";
 			this->label8->Size = System::Drawing::Size(0, 17);
@@ -284,7 +273,7 @@ namespace CppWinForm1 {
 			// label9
 			// 
 			this->label9->AutoSize = true;
-			this->label9->Location = System::Drawing::Point(60, 410);
+			this->label9->Location = System::Drawing::Point(57, 363);
 			this->label9->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label9->Name = L"label9";
 			this->label9->Size = System::Drawing::Size(0, 17);
@@ -294,23 +283,12 @@ namespace CppWinForm1 {
 			// label10
 			// 
 			this->label10->AutoSize = true;
-			this->label10->Location = System::Drawing::Point(60, 448);
+			this->label10->Location = System::Drawing::Point(57, 401);
 			this->label10->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label10->Name = L"label10";
 			this->label10->Size = System::Drawing::Size(0, 17);
 			this->label10->TabIndex = 17;
 			this->label10->Click += gcnew System::EventHandler(this, &MyForm::Label10_Click);
-			// 
-			// label11
-			// 
-			this->label11->AutoSize = true;
-			this->label11->Location = System::Drawing::Point(40, 251);
-			this->label11->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
-			this->label11->Name = L"label11";
-			this->label11->Size = System::Drawing::Size(152, 17);
-			this->label11->TabIndex = 18;
-			this->label11->Text = L"Скорость обновления";
-			this->label11->Click += gcnew System::EventHandler(this, &MyForm::Label11_Click);
 			// 
 			// MyForm
 			// 
@@ -318,8 +296,6 @@ namespace CppWinForm1 {
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::SystemColors::Control;
 			this->ClientSize = System::Drawing::Size(1495, 773);
-			this->Controls->Add(this->textBox5);
-			this->Controls->Add(this->label11);
 			this->Controls->Add(this->label10);
 			this->Controls->Add(this->label9);
 			this->Controls->Add(this->label8);
@@ -379,7 +355,7 @@ private: System::Void Button1_Click(System::Object^ sender, System::EventArgs^ e
 	StartSize = Convert::ToInt32(textBox2->Text);
 	p = Convert::ToDouble(textBox3->Text);
 	d = Convert::ToDouble(textBox4->Text);
-	timer1->Interval = Convert::ToDouble(textBox5->Text);
+	timer1->Interval = 100; // Convert::ToDouble(textBox5->Text);
 	q = new TQueue<int> (MaxSize);
 	for (int i = 0; i < StartSize; i++)
 	{
@@ -404,8 +380,7 @@ private: System::Void TextBox4_TextChanged(System::Object^ sender, System::Event
 {
 }
 
-private: System::Void TextBox5_TextChanged(System::Object^ sender, System::EventArgs^ e) {
-}
+//private: System::Void TextBox5_TextChanged(System::Object^ sender, System::EventArgs^ e) {}
 private: System::Void Label5_Click(System::Object^ sender, System::EventArgs^ e) {
 }
 private: System::Void Timer1_Tick(System::Object^ sender, System::EventArgs^ e) 
@@ -438,7 +413,6 @@ private: System::Void Label10_Click(System::Object^ sender, System::EventArgs^ e
 }
 private: System::Void Label7_Click(System::Object^ sender, System::EventArgs^ e) {
 }
-private: System::Void Label11_Click(System::Object^ sender, System::EventArgs^ e) {
-}
+//private: System::Void Label11_Click(System::Object^ sender, System::EventArgs^ e) {}
 };
 }

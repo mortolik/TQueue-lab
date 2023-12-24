@@ -44,7 +44,8 @@ public:
 		finish = -1;
 	}
 
-	bool operator == (const TQueue& s) {			//operator ==
+	bool operator == (const TQueue& s)
+	{			
 		if (size != s.size) return false;
 		else {
 			if (start != s.start) return false;
@@ -60,17 +61,17 @@ public:
 		return true;
 	}
 
-	bool operator != (const TQueue& s) {			//operator != 
+	bool operator != (const TQueue& s) {			
 		if (*this == s) return false;
 		else return true;
 	}
 
-	bool IsEmpty() {									//check of empty queue: if count = 0 -> queue is empty
+	bool IsEmpty() {									
 		if (count == 0) return true;
 		else return false;
 	}
 
-	bool IsFull() {									//check of full queue: if count = size -> queue is full
+	bool IsFull() {									
 		if (count == size) return true;
 		else return false;
 	}

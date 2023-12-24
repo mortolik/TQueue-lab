@@ -5,11 +5,16 @@
 
 TEST(TQueue, can_create_queue_with_pozitive_length)
 {
-	ASSERT_NO_THROW(TQueue<int> s(1));
+	ASSERT_NO_THROW(TQueue<int> s(3));
+}
+TEST(TQueue, can_get_count)
+{
+	TQueue<int> s(2);
+	EXPECT_EQ(0, s.GetCount());
 }
 TEST(TQueue, cant_create_queue_with_negative_length)
 {
-	ASSERT_ANY_THROW(TQueue<int> s(-1));
+	ASSERT_ANY_THROW(TQueue<int> s(-8));
 }
 TEST(TQueue, can_create_copied_queue)
 {
@@ -22,12 +27,22 @@ TEST(TQueue, can_assign_queues)
 	TQueue<int> s(2);
 	ASSERT_NO_THROW(a = s);
 }
+
 TEST(TQueue, assign_operator_change_size)
 {
 	TQueue<int> a(7);
 	TQueue<int> s(9);
 	a = s;
 	EXPECT_EQ(9, a.Size());
+}
+TEST(TQueue, can_use_front_and_back)
+{
+	TQueue<int> q(4);
+	q.Push(1);
+	int b1, b2;
+	ASSERT_NO_THROW(b1 = q.Front());
+	ASSERT_NO_THROW(b2 = q.Back());
+	EXPECT_EQ(b1, b2);
 }
 TEST(TQueue, assigned_queues_are_equal)
 {
