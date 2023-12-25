@@ -11,9 +11,9 @@ TEST(TQueue, new_queue_is_empty)
 {
     TQueue<int> q;
 
-    int sostoyanie = q.IsEmpty();
+    int state = q.IsEmpty();
 
-    EXPECT_EQ(1, sostoyanie);
+    EXPECT_EQ(1, state);
 }
 
 

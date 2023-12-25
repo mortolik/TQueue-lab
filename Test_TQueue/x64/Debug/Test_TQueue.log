@@ -1,5 +1,39 @@
-﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(517,5): warning MSB8028: промежуточный каталог (x64\Debug\) содержит файлы, которые используются совместно с другим проектом (TestStack.vcxproj).  Это может привести к ошибкам очистки и перестроения.
+﻿C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(513,5): warning MSB8028: промежуточный каталог (x64\Debug\) содержит файлы, которые используются совместно с другим проектом (TestStack.vcxproj).  Это может привести к ошибкам очистки и перестроения.
+  gtest-all.cc
+C:\Users\User\source\repos\TQueue\Test_TQueue\gtest.h(55,1): warning C4005: _SILENCE_TR1_NAMESPACE_DEPRECATION_WARNING: изменение макроопределения
+C:\Users\User\source\repos\TQueue\Test_TQueue\gtest-all.cc : message : см. предыдущее определение "_SILENCE_TR1_NAMESPACE_DEPRECATION_WARNING"
+  test_main.cpp
+C:\Users\User\source\repos\TQueue\Test_TQueue\gtest.h(55,1): warning C4005: _SILENCE_TR1_NAMESPACE_DEPRECATION_WARNING: изменение макроопределения
+C:\Users\User\source\repos\TQueue\Test_TQueue\test_main.cpp : message : см. предыдущее определение "_SILENCE_TR1_NAMESPACE_DEPRECATION_WARNING"
   test_tqueue.cpp
-C:\Git\mp2-lab4-queue\TQueue\Test_TQueue\gtest.h(55,1): warning C4005: _SILENCE_TR1_NAMESPACE_DEPRECATION_WARNING: изменение макроопределения
-C:\Git\mp2-lab4-queue\TQueue\Test_TQueue\gtest.h(55,1): message : "_SILENCE_TR1_NAMESPACE_DEPRECATION_WARNING" ранее объявлен в командной строке
-  Test_TQueue.vcxproj -> C:\Git\mp2-lab4-queue\TQueue\x64\Debug\Test_TQueue.exe
+C:\Users\User\source\repos\TQueue\Test_TQueue\gtest.h(55,1): warning C4005: _SILENCE_TR1_NAMESPACE_DEPRECATION_WARNING: изменение макроопределения
+C:\Users\User\source\repos\TQueue\Test_TQueue\test_tqueue.cpp : message : см. предыдущее определение "_SILENCE_TR1_NAMESPACE_DEPRECATION_WARNING"
+C:\Users\User\source\repos\TQueue\Test_TQueue\gtest.h(18867,19): warning C4805: ==: небезопасное смешение типа "const T1" и типа "const T2" в операции
+          with
+          [
+              T1=int
+          ]
+          and
+          [
+              T2=bool
+          ]
+C:\Users\User\source\repos\TQueue\Test_TQueue\gtest.h(18904): message : выполняется компиляция ссылки на экземпляр шаблон функции "testing::AssertionResult testing::internal::CmpHelperEQ<T1,T2>(const char *,const char *,const T1 &,const T2 &)"
+          with
+          [
+              T1=int,
+              T2=bool
+          ]
+C:\Users\User\source\repos\TQueue\Test_TQueue\test_tqueue.cpp(80): message : выполняется компиляция ссылки на экземпляр шаблон функции "testing::AssertionResult testing::internal::EqHelper<false>::Compare<int,bool>(const char *,const char *,const T1 &,const T2 &)"
+          with
+          [
+              T1=int,
+              T2=bool
+          ]
+C:\Users\User\source\repos\TQueue\Test_TQueue\test_tqueue.cpp(80): message : выполняется компиляция ссылки на экземпляр шаблон функции "testing::AssertionResult testing::internal::EqHelper<false>::Compare<int,bool>(const char *,const char *,const T1 &,const T2 &)"
+          with
+          [
+              T1=int,
+              T2=bool
+          ]
+  Создание кода...
+  Test_TQueue.vcxproj -> C:\Users\User\source\repos\TQueue\x64\Debug\Test_TQueue.exe
